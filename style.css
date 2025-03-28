@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 200 700;
+  font-style: normal;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+
+  /* Spacing */
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  padding: var(--spacing-300);
+  background-color: var(--color-grey-900);
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-50);
+}
+
+li {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--color-grey-700);
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+li:hover {
+  color: var(--color-grey-700);
+  background-color: var(--color-green);
+}
+
+li:not(:last-child) {
+  margin-bottom: var(--spacing-200);
+}
+
+q {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.highlighted {
+  color: var(--color-green);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card {
+  /* flex: 0 1 auto. The item is sized according to its width */
+  flex: initial;
+  width: 384px;
+  padding: var(--spacing-500);
+  background-color: var(--color-grey-800);
+  border-radius: 12px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+  margin-bottom: var(--spacing-300);
+}
+
+.avatar-img {
+  border-radius: 50%;
+}
+
+@media (max-width: 375px) {
+  .card {
+    padding: var(--spacing-300);
+  }
+}
